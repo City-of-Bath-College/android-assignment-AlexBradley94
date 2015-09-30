@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#B82E00">
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginTop="60sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250sp"
+        android:textColor="#fefefe"
+        />
+
+    <Button
+        android:id="@+id/buttonTrue"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:text="True"
+        android:layout_marginTop="320sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50sp"
+        android:background="#CB6745"
+        android:textColor="#FEFEFE"
+        />
+
+    <Button
+        android:id="@+id/buttonFalse"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:text="False"
+        android:layout_marginTop="320sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50sp"
+        android:background="#CB6745"
+        android:textColor="#FEFEFE"
+        />
+
+</RelativeLayout>
