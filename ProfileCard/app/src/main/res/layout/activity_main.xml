@@ -1,0 +1,122 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/skyline"
+        android:layout_width="wrap_content"
+        android:layout_height="200sp"
+        android:src="@drawable/skyline"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:text="Alex Bradley"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textColor="#FF5722"
+        android:layout_marginLeft="145sp"
+        android:layout_marginTop="145sp"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="-50sp"
+        android:layout_marginLeft="30sp"
+        android:src="@drawable/icon"
+        android:layout_below="@+id/skyline"
+        />
+
+    <ImageView
+        android:id="@+id/android"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:src="@drawable/android"
+        android:layout_below="@+id/icon"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="40sp"/>
+
+    <TextView
+        android:id="@+id/github"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlexBradley94"
+        android:layout_toRightOf="@id/android"
+        android:layout_alignTop="@id/android"
+        android:layout_alignBottom="@id/android"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:paddingLeft="10sp"
+        android:textColor="#FF5722"/>
+
+    <ImageView
+        android:id="@+id/cake"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:src="@drawable/cake"
+        android:layout_below="@+id/android"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="40sp"/>
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="19th May"
+        android:layout_toRightOf="@id/cake"
+        android:layout_alignTop="@id/cake"
+        android:layout_alignBottom="@id/cake"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:paddingLeft="10sp"
+        android:textColor="#FF5722"/>
+
+    <ImageView
+        android:id="@+id/http"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:src="@drawable/http"
+        android:layout_below="@+id/cake"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="40sp"/>
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="www.Website.com"
+        android:layout_toRightOf="@id/http"
+        android:layout_alignTop="@id/http"
+        android:layout_alignBottom="@id/http"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:paddingLeft="10sp"
+        android:textColor="#FF5722"/>
+
+    <ImageView
+        android:id="@+id/pin"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:src="@drawable/pin"
+        android:layout_below="@id/http"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="40sp"/>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bath, United Kingdom"
+        android:layout_toRightOf="@id/pin"
+        android:layout_alignTop="@id/pin"
+        android:layout_alignBottom="@id/pin"
+        android:gravity="center_vertical"
+        android:textSize="20sp"
+        android:paddingLeft="10sp"
+        android:textColor="#FF5722"/>
+
+    </RelativeLayout>
