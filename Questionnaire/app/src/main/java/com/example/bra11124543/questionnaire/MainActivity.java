@@ -94,5 +94,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(MainActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
         }
+
+        setUpQuestions();
     }
 }
