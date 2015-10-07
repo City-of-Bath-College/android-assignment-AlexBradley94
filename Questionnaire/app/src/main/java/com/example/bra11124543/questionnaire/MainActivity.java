@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .create();
         alertDialog.show();
+
+        generateQuestions();
     }
 }
 
