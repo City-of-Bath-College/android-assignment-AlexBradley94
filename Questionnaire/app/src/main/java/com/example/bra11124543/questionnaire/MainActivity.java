@@ -1,9 +1,10 @@
 package com.example.bra11124543.questionnaire;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,11 +20,14 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonFalse;
     private TextView question;
     private ImageView flag;
+    private TextView lblCount;
 
     private List<QuestionObject> questions;
 
     private QuestionObject currentQuestions;
     private int index;
+
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
         buttonFalse = (Button)findViewById(R.id.buttonFalse);
         question = (TextView)findViewById(R.id.question);
         flag = (ImageView)findViewById(R.id.flag);
+        lblCount = (TextView)findViewById(R.id.scoreCount);
 
         flag.setImageResource(R.drawable.flag_australia);
 
         index = 0;
+        score = 0;
 
         buttonTrue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,12 +83,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpQuestions(){
 
-        currentQuestions = questions.get(index);
+        if(index == questions.size()){
+            Log.d("ALEX_APP", "ALL QUESTIONS ANSWERED");
+            endGame();
+        } else{
+            currentQuestions = questions.get(index);
+            question.setText(currentQuestions.getQuestion());
+            flag.setImageResource(currentQuestions.getPicture());
+            index++;
+        }
 
-        question.setText(currentQuestions.getQuestion());
-        flag.setImageResource(currentQuestions.getPicture());
-
-        index++;
     }
 
     private void determineButtonPress(boolean answer){
@@ -91,10 +101,25 @@ public class MainActivity extends AppCompatActivity {
 
         if(answer == expectedAnswer){
             Toast.makeText(MainActivity.this,"Correct!", Toast.LENGTH_SHORT).show();
+            score++;
+            lblCount.setText("Score = " + score);
         } else {
             Toast.makeText(MainActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
         }
 
         setUpQuestions();
     }
+
+    private void endGame(){
+        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
+                .setTitle("Congratulations")
+                .setMessage("You scored " + score + " points this round!")
+                .setNeutralButton("Ok", new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .create();
+        alertDialog.show();
+    }
 }
+
