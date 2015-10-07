@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         question = (TextView)findViewById(R.id.question);
         flag = (ImageView)findViewById(R.id.flag);
 
-        question.setText("Is this a test question?");
-
         flag.setImageResource(R.drawable.flag_australia);
 
         index = 0;
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         boolean expectedAnswer = currentQuestions.isAnswer();
 
-        if(answer = expectedAnswer){
+        if(answer == expectedAnswer){
             Toast.makeText(MainActivity.this,"Correct!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(MainActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
