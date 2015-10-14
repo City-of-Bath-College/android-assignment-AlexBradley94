@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         question = (TextView)findViewById(R.id.question);
         flag = (ImageView)findViewById(R.id.flag);
         lblCount = (TextView)findViewById(R.id.scoreCount);
-        btnBack = (Button)findViewById(R.id.btn_Back);
 
         flag.setImageResource(R.drawable.flag_australia);
 

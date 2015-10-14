@@ -10,21 +10,10 @@ import android.widget.Button;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private Button btnBack;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        btnBack = (Button)findViewById(R.id.btn_ProfileBack);
-
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ProfileActivity.this, IntroductionActivity.class);
-                startActivity(i);
-            }
-        });
     }
 }
