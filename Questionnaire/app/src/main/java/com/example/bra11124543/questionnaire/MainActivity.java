@@ -2,6 +2,7 @@ package com.example.bra11124543.questionnaire;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button buttonTrue;
     private Button buttonFalse;
+    private Button btnBack;
     private TextView question;
     private ImageView flag;
     private TextView lblCount;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         question = (TextView)findViewById(R.id.question);
         flag = (ImageView)findViewById(R.id.flag);
         lblCount = (TextView)findViewById(R.id.scoreCount);
+        btnBack = (Button)findViewById(R.id.btn_Back);
 
         flag.setImageResource(R.drawable.flag_australia);
 
@@ -59,7 +62,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        generateQuestions();
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, IntroductionActivity.class);
+                startActivity(i);
+            }
+        });
+
+                generateQuestions();
 
         setUpQuestions();
     }
@@ -112,14 +123,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void endGame(){
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
-                .setTitle("Congratulations")
+                .setTitle("Congratulations!")
                 .setMessage("You scored " + score + " points this round!")
-                .setNeutralButton("Ok", new DialogInterface.OnClickListener(){
+                .setNeutralButton("ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+                        finish();
                     }
                 })
                 .create();
+
         alertDialog.show();
     }
+
+
 }
+
 
