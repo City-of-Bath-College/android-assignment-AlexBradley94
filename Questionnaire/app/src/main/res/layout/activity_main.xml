@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#fffefe"
+    android:background="#CFCFCF"
     >
 
     <ImageView
@@ -24,6 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250sp"
         android:textColor="#303030"
+        android:gravity="center"
         />
 
     <Button
