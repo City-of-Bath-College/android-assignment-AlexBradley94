@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Congratulations!")
                 .setMessage("You scored " + score + " points this round!")
-                .setNeutralButton("ok", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
                         HighScoreObject highScore = new HighScoreObject("alex", score,  new Date().getTime());
@@ -141,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
                         Paper.book().write("highscores", highScores);
 
                         finish();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
                     }
                 })
                 .create();
