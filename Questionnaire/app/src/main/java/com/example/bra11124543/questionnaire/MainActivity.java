@@ -13,7 +13,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+
+import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 generateQuestions();
 
         setUpQuestions();
+
+        Paper.init(this);
     }
 
     private void generateQuestions(){
@@ -126,6 +131,15 @@ public class MainActivity extends AppCompatActivity {
                 .setMessage("You scored " + score + " points this round!")
                 .setNeutralButton("ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
+
+                        HighScoreObject highScore = new HighScoreObject("alex", score,  new Date().getTime());
+
+                        List<HighScoreObject> highScores = Paper.book().read("highScores", new ArrayList<HighScoreObject>());
+
+                        highScores.add(highScore);
+
+                        Paper.book().write("highscores", highScores);
+
                         finish();
                     }
                 })

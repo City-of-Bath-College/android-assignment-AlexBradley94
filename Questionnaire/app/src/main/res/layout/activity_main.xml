@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#B82E00"
+    android:background="#fffefe"
     >
 
     <ImageView
@@ -23,7 +23,7 @@
         android:textSize="25sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250sp"
-        android:textColor="#fefefe"
+        android:textColor="#303030"
         />
 
     <Button
@@ -34,8 +34,8 @@
         android:layout_marginTop="400sp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50sp"
-        android:background="#CB6745"
-        android:textColor="#FEFEFE"
+        android:background="#33CC33"
+        android:textColor="#303030"
         />
 
     <Button
@@ -46,8 +46,8 @@
         android:layout_marginTop="400sp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="50sp"
-        android:background="#CB6745"
-        android:textColor="#FEFEFE"
+        android:background="#CC0000"
+        android:textColor="#fffefe"
         />
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_marginBottom="10sp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="27sp"
-        android:textColor="#FEFEFE"
+        android:textColor="#303030"
         />
 
 </RelativeLayout>
