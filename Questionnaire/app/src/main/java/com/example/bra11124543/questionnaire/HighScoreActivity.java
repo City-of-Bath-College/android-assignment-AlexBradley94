@@ -63,7 +63,7 @@ public class HighScoreActivity extends AppCompatActivity {
 
             TextView lblTitle = (TextView)convertView.findViewById(R.id.lblTitle);
 
-            lblTitle.setText(highscore.getScore() + " - " + highscore.getName() + " - " + fmtOut.format(date));
+            lblTitle.setText(highscore.getScore() + "      -      " + highscore.getName() + "      -      " + fmtOut.format(date));
 
             return convertView;
         }

@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
                 HighScoreObject highScore = new HighScoreObject(m_Text, score, new Date().getTime());
 
-                List<HighScoreObject> highScores = Paper.book().read("highScores", new ArrayList<HighScoreObject>());
+                List<HighScoreObject> highScores = Paper.book().read("highscores", new ArrayList<HighScoreObject>());
 
                 highScores.add(highScore);
 

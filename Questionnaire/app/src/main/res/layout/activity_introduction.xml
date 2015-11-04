@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bra11124543.questionnaire.IntroductionActivity"
-    android:background="#fffefe">
+    android:background="#CFCFCF">
 
     <ImageView
         android:id="@+id/img_Duck"
@@ -24,7 +24,7 @@
         android:layout_marginTop="7sp"
         android:layout_below="@+id/img_Duck"
         android:gravity="center"
-        android:textColor="#303030"
+        android:textColor="#0066FF"
         android:layout_centerHorizontal="true"
         />
 
@@ -76,7 +76,7 @@
         android:layout_below="@+id/btn_About"
         android:layout_marginTop="15sp"
         android:textSize="20sp"
-        android:textColor="#303030"
+        android:textColor="#0066FF"
         />
 
     <TextView
@@ -89,7 +89,7 @@
         android:layout_marginTop="15sp"
         android:textSize="20sp"
         android:layout_marginLeft="10sp"
-        android:textColor="#303030"
+        android:textColor="#0066FF"
         />
 
 </RelativeLayout>

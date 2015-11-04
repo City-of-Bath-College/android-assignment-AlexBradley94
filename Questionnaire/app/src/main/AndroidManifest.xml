@@ -13,7 +13,7 @@
         </activity>
         <activity
             android:name=".IntroductionActivity"
-            android:label="@string/title_activity_introduction" >
+            android:label="Quiz App" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -4,13 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
-    tools:context="com.example.bra11124543.questionnaire.HighScoreActivity">
+    tools:context="com.example.bra11124543.questionnaire.HighScoreActivity"
+    android:background="#CFCFCF">
+
+    <TextView
+        android:id="@+id/lblScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:text="Score         Name         Date"
+        android:textSize="23sp"
+        android:paddingLeft="32sp"
+        android:textColor="#0066FF"
+        />
 
     <ListView
         android:id="@+id/ListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15sp"
+        android:layout_below="@+id/lblScore"
     />
 
 </RelativeLayout>
