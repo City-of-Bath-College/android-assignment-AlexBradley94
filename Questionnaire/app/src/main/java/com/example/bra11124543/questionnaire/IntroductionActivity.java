@@ -7,12 +7,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.paperdb.Paper;
 
 public class IntroductionActivity extends AppCompatActivity {
 
     private Button btn_Play;
     private Button btn_Highscore;
     private Button btn_About;
+    private TextView currentHighScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,23 @@ public class IntroductionActivity extends AppCompatActivity {
         btn_Play = (Button)findViewById(R.id.btn_Play);
         btn_Highscore = (Button)findViewById(R.id.btn_Highscore);
         btn_About = (Button)findViewById(R.id.btn_About);
+        currentHighScore = (TextView)findViewById(R.id.currentHighScore);
+        Paper.init(this);
+
+        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
+
+        int maxScore = 0;
+
+        for( int i = 0; i < highScores.size(); i++){
+
+            HighScoreObject h = highScores.get(i);
+
+            if (h.getScore() > maxScore ){
+                maxScore = h.getScore();
+            }
+
+        }
+        currentHighScore.setText("Current high score = "+ maxScore);
 
         btn_Play.setOnClickListener(new View.OnClickListener() {
             @Override

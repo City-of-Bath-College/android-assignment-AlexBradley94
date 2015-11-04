@@ -68,28 +68,16 @@
         />
 
     <TextView
-        android:id="@+id/highScore"
-        android:text="High Score = "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120sp"
-        android:layout_below="@+id/btn_About"
-        android:layout_marginTop="15sp"
-        android:textSize="20sp"
-        android:textColor="#0066FF"
-        />
-
-    <TextView
         android:id="@+id/currentHighScore"
         android:text="X"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/highScore"
         android:layout_below="@+id/btn_About"
         android:layout_marginTop="15sp"
         android:textSize="20sp"
         android:layout_marginLeft="10sp"
         android:textColor="#0066FF"
+        android:layout_centerHorizontal="true"
         />
 
 </RelativeLayout>
