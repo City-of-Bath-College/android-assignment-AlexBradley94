@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button buttonTrue;
     private Button buttonFalse;
-    private Button btnBack;
     private TextView question;
     private ImageView flag;
     private TextView lblCount;
@@ -131,16 +130,18 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Congratulations!");
         final EditText input = new EditText(this);
-        input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         builder.setView(input);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 m_Text = input.getText().toString();
 
-                HighScoreObject highScore = new HighScoreObject("alex", score, new Date().getTime());
+                HighScoreObject highScore = new HighScoreObject(m_Text, score, new Date().getTime());
+
                 List<HighScoreObject> highScores = Paper.book().read("highScores", new ArrayList<HighScoreObject>());
+
                 highScores.add(highScore);
+
                 Paper.book().write("highscores", highScores);
 
                 finish();
@@ -148,10 +149,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         builder.show();
-
-
 
     }
 }

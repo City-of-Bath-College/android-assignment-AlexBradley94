@@ -5,9 +5,9 @@ package com.example.bra11124543.questionnaire;
  */
 public class HighScoreObject {
 
-    public String name;
-    public int score;
-    public long time;
+    private String name;
+    private int score;
+    private long time;
 
     public HighScoreObject(){
 
@@ -19,4 +19,15 @@ public class HighScoreObject {
         this.time = time;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public long getTime() {
+        return time;
+    }
 }
