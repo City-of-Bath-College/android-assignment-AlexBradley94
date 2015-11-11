@@ -94,8 +94,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_ireland, "Ivory Coast", "Ireland"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_romania, "Romania", "Moldova"));
         questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_canada, "Bosnia", "Canada"));
-        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_uae, "United Emirates", "Madagascar"));
-        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_macedonia, "Montenegro", "Macedonia"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_andorra, "Andorra", "Chad"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_uk, "UK", "Malta"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_hungary, "Hungary", "Italy"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_pakistan, "Pakistan", "New Caledonia"));
@@ -106,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_afghanistan, "Afghanistan", "Jordan"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_chile, "Chile", "Cuba"));
         questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_belgium, "Germany", "Belgium"));
-        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_srilanka, "Papau New Guinea", "Sri Lanka"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_georgia, "Iceland", "Georgia"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_cyprus, "Equatorial Guinea", "Cyprus"));
     }
 
