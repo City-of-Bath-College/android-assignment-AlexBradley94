@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         flag = (ImageView) findViewById(R.id.flag);
         lblCount = (TextView) findViewById(R.id.scoreCount);
 
-        flag.setImageResource(R.drawable.flag_australia);
+        flag.setImageResource(R.drawable.flag_singapore);
 
         index = 0;
         score = 0;
@@ -77,23 +77,37 @@ public class MainActivity extends AppCompatActivity {
     private void generateQuestions() {
 
         questions = new ArrayList<>();
-
-        questions.add(new QuestionObject("Burma has a capital city", false, R.drawable.flag_burma));
-        questions.add(new QuestionObject("Guam has roads made of coral", true, R.drawable.flag_guam));
-        questions.add(new QuestionObject("Nepal has the only non-rectangular flag", true, R.drawable.flag_nepal));
-        questions.add(new QuestionObject("Saudi Arabia contains the most rivers in the world", false, R.drawable.flag_saudi));
-        questions.add(new QuestionObject("The whole of monaco can fit inside central park in New York", true, R.drawable.flag_monaco));
-        questions.add(new QuestionObject("Canada contains the most lakes in the world", true, R.drawable.flag_canada));
-        questions.add(new QuestionObject("The Falkland Islands has the least sheep per capita in the world", false, R.drawable.flag_falklands));
-        questions.add(new QuestionObject("The United States has the most people in prison in comparison to population", true, R.drawable.flag_usa));
-        questions.add(new QuestionObject("The Hawaiian alphabet contains only 12 letters", true, R.drawable.flag_hawaii));
-        questions.add(new QuestionObject("Australia is the continent with the most active volcanoes in the world", false, R.drawable.flag_australia));
-        questions.add(new QuestionObject("French Fries are in fact from Belgium", true, R.drawable.flag_burma));
-        questions.add(new QuestionObject("Croissant's are French", false, R.drawable.flag_burma));
-        questions.add(new QuestionObject("In Africa you can buy beer brewed from bananas", true, R.drawable.flag_burma));
-        questions.add(new QuestionObject("The country Brazil was names after the nut", false, R.drawable.flag_burma));
-        questions.add(new QuestionObject("Paper came from Japan", false, R.drawable.flag_burma));
-        questions.add(new QuestionObject("The Unites States shreds 7,000 tonnes of worn out currency per year", true, R.drawable.flag_usa));
+        //True means left option (one), false is right option (two).
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_singapore, "Singapore", "Indonesia"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_jamaica, "Jamaica", "Kenya"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_greenland, "Poland", "Greenland"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_saudi, "Saudi Arabia", "Mauritania"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_costarica, "Serbia", "Costa Rica"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_tonga, "Switzerland", "Tonga"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_egypt, "Egypt", "Angola"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_poland, "Greenland", "Poland"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_sweden, "Sweden", "Finland"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_qatar, "Bahrain", "Qatar"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_fiji, "Fiji", "Botswana"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_ghana, "Ghana", "Cameroon"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_zimbabwe, "Zambia", "Zimbabwe"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_ireland, "Ivory Coast", "Ireland"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_romania, "Romania", "Moldova"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_canada, "Bosnia", "Canada"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_uae, "United Emirates", "Madagascar"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_macedonia, "Montenegro", "Macedonia"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_uk, "UK", "Malta"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_hungary, "Hungary", "Italy"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_pakistan, "Pakistan", "New Caledonia"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_vatican, "Dominica", "Vatican City"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_albania, "Grenada", "Albania"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_bulgaria, "Bulgaria", "Bolivia"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_ecuador, "Ghana", "Ecuador"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_afghanistan, "Afghanistan", "Jordan"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_chile, "Chile", "Cuba"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_belgium, "Germany", "Belgium"));
+        questions.add(new QuestionObject("Which flag is this?", false, R.drawable.flag_srilanka, "Papau New Guinea", "Sri Lanka"));
+        questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_cyprus, "Equatorial Guinea", "Cyprus"));
     }
 
     private void setUpQuestions() {
@@ -105,6 +119,8 @@ public class MainActivity extends AppCompatActivity {
             currentQuestions = questions.get(index);
             question.setText(currentQuestions.getQuestion());
             flag.setImageResource(currentQuestions.getPicture());
+            buttonTrue.setText(currentQuestions.getOptionone());
+            buttonFalse.setText(currentQuestions.getOptiontwo());
             index++;
         }
 

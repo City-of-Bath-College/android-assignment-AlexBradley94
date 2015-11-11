@@ -9,11 +9,15 @@ public class QuestionObject {
     private String question;
     private boolean answer;
     private int picture;
+    private String optionone;
+    private String optiontwo;
 
-    public QuestionObject(String question, boolean answer, int picture) {
+    public QuestionObject(String question, boolean answer, int picture, String optionone, String optiontwo) {
         this.question = question;
         this.answer = answer;
         this.picture = picture;
+        this.optionone = optionone;
+        this.optiontwo = optiontwo;
     }
 
     public String getQuestion(){
@@ -26,5 +30,13 @@ public class QuestionObject {
 
     public int getPicture(){
         return picture;
+    }
+
+    public String getOptionone (){
+        return optionone;
+    }
+
+    public String getOptiontwo (){
+        return optiontwo;
     }
 }
