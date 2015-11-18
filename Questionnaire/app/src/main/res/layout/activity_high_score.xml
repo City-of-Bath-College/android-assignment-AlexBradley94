@@ -3,15 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
     tools:context="com.example.bra11124543.questionnaire.HighScoreActivity"
-    android:background="#CFCFCF">
+    android:background="#00BCD4">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
 
     <ListView
         android:id="@+id/ListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15sp"
+        android:layout_below="@+id/tool_bar"
     />
 
 </RelativeLayout>

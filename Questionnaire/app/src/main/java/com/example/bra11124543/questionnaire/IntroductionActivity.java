@@ -32,20 +32,7 @@ public class IntroductionActivity extends AppCompatActivity {
         currentHighScore = (TextView)findViewById(R.id.currentHighScore);
         Paper.init(this);
 
-        List<HighScoreObject> highScores = Paper.book().read("high scores", new ArrayList<HighScoreObject>());
 
-        int maxScore = 0;
-
-        for( int i = 0; i < highScores.size(); i++){
-
-            HighScoreObject h = highScores.get(i);
-
-            if (h.getScore() > maxScore ){
-                maxScore = h.getScore();
-            }
-
-        }
-        currentHighScore.setText("Current high score = "+ maxScore);
 
         btn_Play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,5 +57,28 @@ public class IntroductionActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        List<HighScoreObject> highScores = Paper.book().read("highscores", new ArrayList<HighScoreObject>());
+
+        int maxScore = 0;
+        String playerName = new String();
+
+        for( int i = 0; i < highScores.size(); i++){
+
+            HighScoreObject h = highScores.get(i);
+
+            if (h.getScore() > maxScore ){
+                maxScore = h.getScore();
+                playerName = h.getName();
+            }
+
+        }
+        currentHighScore.setText("Current high score is \n" + playerName + " with " + maxScore);
+
     }
 }

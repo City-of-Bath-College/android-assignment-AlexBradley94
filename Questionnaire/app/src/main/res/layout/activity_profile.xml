@@ -89,14 +89,16 @@
         android:id="@+id/website"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="www.Website.com"
+        android:text="https://uk.linkedin.com/in/alexbradley94"
         android:layout_toRightOf="@id/http"
         android:layout_alignTop="@id/http"
         android:layout_alignBottom="@id/http"
         android:gravity="center_vertical"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:paddingLeft="10sp"
-        android:textColor="#FF5722"/>
+        android:textColor="#FF5722"
+        android:autoLink="web"
+        />
 
     <ImageView
         android:id="@+id/pin"

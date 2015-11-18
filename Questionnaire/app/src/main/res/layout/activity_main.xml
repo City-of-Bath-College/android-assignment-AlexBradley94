@@ -4,8 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#CFCFCF"
+    android:background="#00BCD4"
     >
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar">
+    </include>
 
     <ImageView
         android:id="@+id/flag"
@@ -20,10 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="XXXX"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250sp"
-        android:textColor="#303030"
+        android:textColor="#E0F7FA"
         android:gravity="center"
         />
 
@@ -31,24 +36,24 @@
         android:id="@+id/buttonTrue"
         android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:text="True"
-        android:layout_marginTop="400sp"
+        android:text="X"
+        android:layout_marginTop="330sp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50sp"
-        android:background="#33CC33"
-        android:textColor="#303030"
+        android:background="#00838F"
+        android:textColor="#fefefe"
         />
 
     <Button
         android:id="@+id/buttonFalse"
         android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:text="False"
-        android:layout_marginTop="400sp"
+        android:text="X"
+        android:layout_marginTop="330sp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="50sp"
-        android:background="#CC0000"
-        android:textColor="#fffefe"
+        android:background="#00838F"
+        android:textColor="#fefefe"
         />
 
     <TextView
@@ -58,9 +63,10 @@
         android:text="Score = 0"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10sp"
-        android:layout_alignParentRight="true"
         android:layout_marginRight="27sp"
-        android:textColor="#303030"
+        android:textColor="#E0F7FA"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
         />
 
 </RelativeLayout>

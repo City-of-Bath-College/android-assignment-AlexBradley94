@@ -4,28 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bra11124543.questionnaire.IntroductionActivity"
-    android:background="#CFCFCF">
+    android:background="#00BCD4">
 
     <ImageView
         android:id="@+id/img_Duck"
         android:layout_width="170sp"
         android:layout_height="170sp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/globeicon"
-        android:layout_marginTop="17sp"
+        android:src="@drawable/flagglobe"
+        android:layout_marginTop="5sp"
         />
 
     <TextView
         android:id="@+id/txt_Greeting"
-        android:text="Quiz"
+        android:text="Fun with Flags!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:layout_marginTop="7sp"
         android:layout_below="@+id/img_Duck"
         android:gravity="center"
-        android:textColor="#0066FF"
+        android:textColor="#E0F7FA"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
         />
 
     <Button
@@ -35,9 +35,9 @@
         android:layout_height="60sp"
         android:layout_below="@+id/txt_Greeting"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20sp"
-        android:background="#0099FF"
-        android:textColor="#303030"
+        android:layout_marginTop="25sp"
+        android:background="#00838F"
+        android:textColor="#fefefe"
         android:textSize="20sp"
         />
 
@@ -49,8 +49,8 @@
         android:layout_below="@+id/btn_Play"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17sp"
-        android:background="#0099FF"
-        android:textColor="#303030"
+        android:background="#00838F"
+        android:textColor="#fefefe"
         android:textSize="20sp"
         />
 
@@ -62,8 +62,8 @@
         android:layout_below="@+id/btn_Highscore"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17sp"
-        android:background="#0099FF"
-        android:textColor="#303030"
+        android:background="#00838F"
+        android:textColor="#fefefe"
         android:textSize="20sp"
         />
 
@@ -73,11 +73,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_About"
-        android:layout_marginTop="15sp"
-        android:textSize="20sp"
+        android:layout_marginTop="25sp"
+        android:textSize="15sp"
         android:layout_marginLeft="10sp"
-        android:textColor="#0066FF"
+        android:textColor="#E0F7FA"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
         />
 
 </RelativeLayout>

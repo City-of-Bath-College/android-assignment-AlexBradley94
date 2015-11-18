@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -21,6 +22,8 @@ import java.util.List;
 import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Toolbar toolbar;
 
     private Button buttonTrue;
     private Button buttonFalse;
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
+        setSupportActionBar(toolbar);
 
         buttonTrue = (Button) findViewById(R.id.buttonTrue);
         buttonFalse = (Button) findViewById(R.id.buttonFalse);
@@ -132,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         if (answer == expectedAnswer) {
             Toast.makeText(MainActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
             score++;
-            lblCount.setText("Score = " + score);
+            lblCount.setText("Current Score = " + score);
         } else {
             Toast.makeText(MainActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
         }
@@ -143,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
     private void endGame() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Congratulations!");
+        builder.setTitle("Congratulations! Please enter your name!");
         final EditText input = new EditText(this);
         builder.setView(input);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
