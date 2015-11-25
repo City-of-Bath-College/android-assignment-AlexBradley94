@@ -2,11 +2,10 @@ package com.example.bra11124543.questionnaire;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.os.Bundle;
-import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,13 +22,13 @@ import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
-
-    private Button buttonTrue;
-    private Button buttonFalse;
-    private TextView question;
-    private ImageView flag;
-    private TextView lblCount;
+    private Toolbar toolbar; //Allows to edit or remove the toolbar
+    MediaPlayer player; //Allows for sounds when hitting correct and incorrect button
+    private Button buttonTrue; //Pretty self explanatory
+    private Button buttonFalse; //Pretty self explanatory
+    private TextView question; //Pretty self explanatory
+    private ImageView flag; //Pretty self explanatory
+    private TextView lblCount; //Pretty self explanatory
 
     private List<QuestionObject> questions;
 
@@ -38,51 +37,51 @@ public class MainActivity extends AppCompatActivity {
 
     private String m_Text = "";
 
-    private int score;
+    private int score; //Holds the current score
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); //When the app is opened
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
+        toolbar = (Toolbar) findViewById(R.id.tool_bar); //Attaching the layout to the toolbar object
         setSupportActionBar(toolbar);
 
-        buttonTrue = (Button) findViewById(R.id.buttonTrue);
-        buttonFalse = (Button) findViewById(R.id.buttonFalse);
-        question = (TextView) findViewById(R.id.question);
-        flag = (ImageView) findViewById(R.id.flag);
-        lblCount = (TextView) findViewById(R.id.scoreCount);
+        buttonTrue = (Button) findViewById(R.id.buttonTrue); //Pretty self explanatory
+        buttonFalse = (Button) findViewById(R.id.buttonFalse); //Pretty self explanatory
+        question = (TextView) findViewById(R.id.question); //Pretty self explanatory
+        flag = (ImageView) findViewById(R.id.flag); //Pretty self explanatory
+        lblCount = (TextView) findViewById(R.id.scoreCount); //Pretty self explanatory
 
-        flag.setImageResource(R.drawable.flag_singapore);
+        flag.setImageResource(R.drawable.flag_singapore); //Holds the image for the imageview
 
-        index = 0;
-        score = 0;
+        index = 0; //when app is opened these values
+        score = 0;       //start again at 0
 
-        buttonTrue.setOnClickListener(new View.OnClickListener() {
+        buttonTrue.setOnClickListener(new View.OnClickListener() { //Sets one button to "true"
             @Override
             public void onClick(View v) {
                 determineButtonPress(true);
             }
         });
 
-        buttonFalse.setOnClickListener(new View.OnClickListener() {
+        buttonFalse.setOnClickListener(new View.OnClickListener() { //Sets one button to "false"
             @Override
             public void onClick(View v) {
                 determineButtonPress(false);
             }
         });
 
-        generateQuestions();
+        generateQuestions(); //Goes to generateQuestions function
 
-        setUpQuestions();
+        setUpQuestions(); //Goes to setUpQuestions function
 
-        Paper.init(this);
+        Paper.init(this); //Holds Highscores
     }
 
     private void generateQuestions() {
 
-        questions = new ArrayList<>();
+        questions = new ArrayList<>(); //All of the seperate questions
         //True means left option (one), false is right option (two).
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_singapore, "Singapore", "Indonesia"));
         questions.add(new QuestionObject("Which flag is this?", true, R.drawable.flag_jamaica, "Jamaica", "Kenya"));
@@ -117,10 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpQuestions() {
 
-        if (index == questions.size()) {
+        if (index == questions.size()) { //If all questions are answered end the game
             Log.d("ALEX_APP", "ALL QUESTIONS ANSWERED");
             endGame();
-        } else {
+        } else { //Changes the questions and answers until they have run out
             currentQuestions = questions.get(index);
             question.setText(currentQuestions.getQuestion());
             flag.setImageResource(currentQuestions.getPicture());
@@ -137,19 +136,24 @@ public class MainActivity extends AppCompatActivity {
 
         if (answer == expectedAnswer) {
             Toast.makeText(MainActivity.this, "Correct!", Toast.LENGTH_SHORT).show();
-            score++;
+            score++; //If correct add 1 to score
             lblCount.setText("Current Score = " + score);
+
+            player = MediaPlayer.create(MainActivity.this,R.raw.ding);
+            player.start();
         } else {
             Toast.makeText(MainActivity.this, "Incorrect!", Toast.LENGTH_SHORT).show();
+            player = MediaPlayer.create(MainActivity.this,R.raw.wrong);
+            player.start(); //If wrong go to next question
         }
 
-        setUpQuestions();
+        setUpQuestions(); //Go to setUpQuestions function
     }
 
     private void endGame() {
-
+        //When game finishes
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Congratulations! Please enter your name!");
+        builder.setTitle("Congratulations! Please enter your name!"); //Display this
         final EditText input = new EditText(this);
         builder.setView(input);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
