@@ -38,7 +38,7 @@ public class IntroductionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(IntroductionActivity.this, MainActivity.class);
-                startActivity(i);
+                startActivity(i); //Go to main quiz activity
             }
         });
 
@@ -46,7 +46,7 @@ public class IntroductionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(IntroductionActivity.this, HighScoreActivity.class);
-                startActivity(i);
+                startActivity(i); //Go to highscores
             }
         });
 
@@ -54,7 +54,7 @@ public class IntroductionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(IntroductionActivity.this, ProfileActivity.class);
-                startActivity(i);
+                startActivity(i); //Go to profile card
             }
         });
     }

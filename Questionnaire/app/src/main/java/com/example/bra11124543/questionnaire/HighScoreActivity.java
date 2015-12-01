@@ -94,13 +94,13 @@ public class HighScoreActivity extends AppCompatActivity {
             warning.setMessage("This action cannot be undone. Are you sure you want to delete the database?");
             warning.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    //only when the ok is clicked will continue to run the program
+                    //When OK is pressed the highscore data will be removed
                     deleteDatabase();
                 }
             });
             warning.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                }
+                } //if cancel is pressed then the highscores remain
             });
             warning.create();
             warning.show();

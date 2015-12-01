@@ -20,14 +20,14 @@ public class HighScoreObject {
     }
 
     public String getName() {
-        return name;
+        return name; //Hold information on the name
     }
 
     public int getScore() {
-        return score;
+        return score; //Hold information on the score
     }
 
     public long getTime() {
-        return time;
+        return time; //Hold information on the time
     }
 }
