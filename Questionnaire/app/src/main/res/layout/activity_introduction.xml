@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.bra11124543.questionnaire.IntroductionActivity"
-    android:background="#00BCD4">
+    android:background="#E5FFFF">
 
     <ImageView
         android:id="@+id/img_Duck"
@@ -23,7 +23,7 @@
         android:textSize="30sp"
         android:layout_below="@+id/img_Duck"
         android:gravity="center"
-        android:textColor="#E0F7FA"
+        android:textColor="#2B2B2B"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25sp"
         />
@@ -76,7 +76,7 @@
         android:layout_marginTop="25sp"
         android:textSize="15sp"
         android:layout_marginLeft="10sp"
-        android:textColor="#E0F7FA"
+        android:textColor="#2B2B2B"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         />

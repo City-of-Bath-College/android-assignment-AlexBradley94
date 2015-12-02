@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#00BCD4"
+    android:background="#E5FFFF"
     >
 
     <include
@@ -28,7 +28,7 @@
         android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250sp"
-        android:textColor="#E0F7FA"
+        android:textColor="#2B2B2B"
         android:gravity="center"
         />
 
@@ -64,7 +64,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10sp"
         android:layout_marginRight="27sp"
-        android:textColor="#E0F7FA"
+        android:textColor="#2B2B2B"
         android:textSize="24sp"
         android:layout_centerHorizontal="true"
         />
