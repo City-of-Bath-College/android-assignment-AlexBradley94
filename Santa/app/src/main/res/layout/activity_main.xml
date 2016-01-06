@@ -1,0 +1,110 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#4CAF50">
+
+    <ImageView
+        android:id="@+id/santa"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100px"
+        android:src="@drawable/santa_one"
+        />
+
+
+    <TextView
+        android:id="@+id/nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textSize="70sp"
+        android:layout_marginTop="40sp"
+        android:layout_below="@+id/santa"
+        android:layout_toLeftOf="@+id/five"
+        android:layout_marginRight="70sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="70sp"
+        android:layout_marginTop="40sp"
+        android:layout_below="@+id/santa"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textSize="70sp"
+        android:layout_marginTop="40sp"
+        android:layout_below="@+id/santa"
+        android:layout_toRightOf="@+id/five"
+        android:layout_marginLeft="70sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="days"
+        android:textSize="30sp"
+        android:layout_below="@+id/nine"
+        android:layout_toLeftOf="@+id/hours"
+        android:layout_marginRight="40sp"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hours"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/five"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="minutes"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/seven"
+        android:layout_toRightOf="@+id/hours"
+        android:layout_marginLeft="20sp"
+        android:textColor="#ffffff"/>
+
+    <View
+        android:id="@+id/coloredbar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#DD2C00"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:id="@+id/btnreindeer"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:background="#2B2B2B"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22sp"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/reindeer"
+        android:drawableRight="@drawable/reindeer"
+        android:padding="15sp"
+        android:text="REINDEERS"
+        android:textColor="#ffffff"/>
+
+
+</RelativeLayout>
